@@ -42,9 +42,6 @@ hr.style-3 {
 
 /*Child*/
 #nav-container{
-	text-overflow: none;
-	white-space: nowrap;
-	overflow-x: hidden;
 	width: 100%;
 }
 
@@ -68,9 +65,29 @@ hr.style-3 {
 	color: white;
 	border: 2px solid white;
 	position: absolute;
-	transform: translate(0%,-42%);
+	top: -7.5px;
 	vertical-align: middle;
 	background-color: white;
+	transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#project-highlighter{
+	height: 30px;
+	width: 30px;
+	border: 2px dotted white;
+	border-radius: 50%;
+	top: -15px;
+	left: -7.5px;
+	vertical-align: middle;
+	position: absolute;
+	animation: spin 5s infinite;
+	animation-timing-function: linear;
+	transform-origin: center center;
+}
+
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
 }
 
 
@@ -109,16 +126,26 @@ hr.style-3 {
 	font-family: 'Playfair Display', serif;
 	font-style: italic;
 	letter-spacing: 0px;
-	font-size:  12vw !important;
+	font-size:  13vw !important;
 	transition: all 0.5s cubic-bezier(0,.82,.4,1);
 	opacity: 0.3;
 }
 
+
 .subject-nav:hover{
-	letter-spacing: 5px;
+	letter-spacing: 10px;
 	transform: scale(1.05);
 	opacity: 1.0;
 	cursor: pointer;
+}
+
+.contact-link{
+	transition: all 0.5s cubic-bezier(0,.82,.4,1);
+	opacity: 0.5;
+}
+
+.contact-link:hover{
+	opacity: 1.0;
 }
 
 #background{

@@ -1,12 +1,15 @@
-let b = baffle('#rl-logo', {
-	characters: '>/</ ▓█░|'
-}).start();
-b.reveal(1500,0);
+$(document).ready(function(){
+	let b = baffle('#rl-logo', {
+		characters: '>/</ ▓█░|'
+	}).start();
+	b.reveal(1500,0);
 
-let b2 = baffle("#prof-label", {
-	characters: '>/</ ▓█░|'
-}).start();
-b2.reveal(3000,0);
+	let b2 = baffle("#prof-label", {
+		characters: '>/</ ▓█░|'
+	}).start();
+	b2.reveal(3000,0);
+});
+
 
 $("#resume-nav").click(function(){
 	showResume();
@@ -31,4 +34,16 @@ function hideResume(){
 	$("#up-arrow").css({"cursor": "cursor"});
 }
 
+const labels = ["SOFTWARE DEVELOPER", "GAME DEVELOPER", "FULL STACK DEVELOPER", "DESIGNER (?)"]
+let currentLabel = 0;
+setInterval(function(){switchLabel()}, 2000);
 
+function switchLabel(){
+	currentLabel = (currentLabel + 1) % labels.length;
+	$("#prof-label").text(labels[currentLabel]);
+	let labelBaffle = baffle("#prof-label", {
+		characters: '>/</ ▓█░|'
+	}).start();
+	$("#prof-label").text(labels[currentLabel]);
+	labelBaffle.reveal(500,0);
+}

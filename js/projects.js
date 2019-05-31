@@ -2,9 +2,11 @@
 const projectQuantities = [5,2,2,2];
 
 function createDots(index){
+	var distBetweenDots = 100 / (projectQuantities[index] - 1);
 	for (var i = 0; i < projectQuantities[index]; i++){
-		console.log("Creating dot");
+		$("#bottom-bar").append($("<div>").addClass("project-dot").css({"left": (i * distBetweenDots) + "%"}));
+		console.log(i * distBetweenDots);
 	}
 }
 
-createDots(0);
+createDots(1);
