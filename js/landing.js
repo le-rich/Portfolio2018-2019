@@ -19,6 +19,14 @@ $("#up-arrow").click(function(){
 	hideResume();
 });
 
+// HOME TO PROJECTS TRANSITION
+$("#projects-nav").click(function(){
+	$("#background").css({	"-webkit-filter": "brightness(0)",
+	"filter": "brightness(0)"});
+	$("#homepage-container").css({"opacity": "0"});
+	setTimeout(function(){ window.location.href="/projects"}, 500);
+});
+
 
 function showResume(){
 	$("#background").css({"transform":"translateY(-50%)"});

@@ -71,26 +71,6 @@ hr.style-3 {
 	transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-#project-highlighter{
-	height: 30px;
-	width: 30px;
-	border: 2px dotted white;
-	border-radius: 50%;
-	top: -15px;
-	left: -7.5px;
-	vertical-align: middle;
-	position: absolute;
-	animation: spin 5s infinite;
-	animation-timing-function: linear;
-	transform-origin: center center;
-}
-
-@keyframes spin {
-    0% {transform:rotate(0deg);}
-    100% {transform:rotate(360deg);}
-}
-
-
 #resume-container{
 	position: absolute;
 	top: 1000%;
@@ -105,10 +85,11 @@ hr.style-3 {
 
 #up-arrow{
 	opacity: 0.3;
-	transform: scale(2);
+	transform: scale(1);
 	transition: all 0.5s;
 	animation: teaseup 5s infinite;
 	animation-timing-function: ease-in-out;
+	filter: invert(1);
 }
 
 #up-arrow:hover{
@@ -140,6 +121,7 @@ hr.style-3 {
 }
 
 .contact-link{
+	font-size: 2vw;
 	transition: all 0.5s cubic-bezier(0,.82,.4,1);
 	opacity: 0.5;
 }
@@ -158,31 +140,65 @@ hr.style-3 {
 	-webkit-filter: brightness(0.7);
 	filter: brightness(0.7);
 	transition: all 1.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-	animation-name: brightup;
+	animation-name: brightup-home;
 	animation-duration: 1s;
+}
+
+#intro-overlay{
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1000;
+	font-size: 10vw;
 }
 
 #projects-background{
 	width: 100%;
 	height: 100%;
 	background-color: black;
-	position: absolute;
+	position: fixed;
 	top: 0%;
-	background-image: url(../css/img/duotonesky.png);
-	background-size: cover;
+	-webkit-filter: brightness(0.4);
+/*	background-image: url(../css/img/duotonesky.png);
+	background-size: cover;*/
 }
 
-@keyframes brightup{
+#homepage-container{
+	transition: all 0.5s;
+}
+
+.description-container{
+	font-family: 'FreeSans';
+}
+
+@keyframes brightup-home{
 	from {-webkit-filter: brightness(0.0);
 	filter: brightness(0.0);}
 	to {-webkit-filter: brightness(0.7);
 	filter: brightness(0.7);}
 }
 
+@keyframes brightdown-home{
+	from {-webkit-filter: brightness(0.7);
+	filter: brightness(0.7);}
+	to {-webkit-filter: brightness(0.0);
+	filter: brightness(0.0);}
+}
 
 #background video{
 	width: 115%;
 	height: 100%;
+}
+
+#boot-seq{
+	animation: boot-up 0.5s;
+}
+
+@keyframes boot-up{
+	0% {opacity: 0;}
+	99%{opacity: 0;}
+	100%{opacity: 1;}
 }
 
 

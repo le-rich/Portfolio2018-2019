@@ -14,14 +14,20 @@
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 <body>
+	<div id="intro-overlay">
+		<div id="boot-seq" class="text-center my-auto">
+			<div>v0.19</div>
+			<div>[<span id="boot-seq-prog">..........</span>]%</div>
+		</div>
+	</div>
 	<div id="projects-background"></div>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-3 display-1">
-				PROJECTS
+			<div class="col-12 display-1">
+			  >	PROJECTS/GAME_DEV.EXE
 			</div>
 		</div>
-		<div class="row text-center my-3">
+		<div id="project-cat-nav" class="row text-center my-3">
 			<div class="col-3 display-4 project-category">GAME DEV</div>
 			<div class="col-3 display-4 project-category">WEB</div>
 			<div class="col-3 display-4 project-category">SOFTWARE</div>
@@ -30,61 +36,59 @@
 		<div class="row mt-5">
 			<div class="col-6 container-fluid">
 				<div class="row">
-					<div class="col-5 text-right ml-auto">
-						<video  height="500px" autoplay loop>
+					<div class="col-9 text-right mx-auto">
+						<!-- <video  height="500px" autoplay loop>
 							<source src="css/vid/mosh3.webm" type="video/webm">
-						</video>
+						</video> -->
+							<img width="100%" height="auto" src="css/img/ecocity/bg-masthead.jpg">
+						</div>
 					</div>
-					<div class="col-3 mr-auto text-left">
-						<ul class="mr-auto">
-							<img class="my-2" src="https://via.placeholder.com/150">
-							<img class="my-2" src="https://via.placeholder.com/150">
-							<img class="my-2" src="https://via.placeholder.com/150">
-						</ul>
+					<div class="row">
+							<div class="col-9 mx-auto my-2 text-center d-flex justify-content-around">
+								<img data-tilt src="https://via.placeholder.com/150">
+								<img data-tilt src="https://via.placeholder.com/150">
+								<img data-tilt src="https://via.placeholder.com/150">
+							</div>
+					</div>
+				</div>
+				<div class="col-6 description-container container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<h1>ECOCITY THE GAME</h1>
+							<h5>STATUS: COMPLETE - 5 WEEKS</h5>
+							<h5>APRIL 2019 - MAY 2019</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6" >
+							<p id="project-description">
+								An environmentally minded city building game. Balance economy and ecology to build the perfect ecocity.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-6 container-fluid">
-				<div class="row">
-					<div class="col-12">TITLE</div>
-				</div>
-				<div class="row">
-					<div class="col-8" >
-						<p id="project-description">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius mollis consequat. Integer ornare eu lorem id pellentesque. Praesent fringilla odio ante, non auctor augue vulputate eu. Praesent cursus ante mauris, id sollicitudin ligula commodo id. Phasellus enim odio, elementum vel sem quis, scelerisque efficitur leo. Etiam accumsan ante quis ligula lobortis lacinia. Nulla hendrerit tincidunt mi, ut imperdiet dui fringilla ac. Donec vel purus in purus rutrum tincidunt ut elementum turpis. Duis in malesuada nisl. Maecenas iaculis ex sed lectus commodo, ac scelerisque eros blandit. Nam ornare dolor at sem imperdiet maximus. Ut dapibus sollicitudin dolor, vel fringilla nibh interdum quis. Suspendisse dui arcu, pretium eu elit ac, feugiat hendrerit nisi.
-						</p>
+			<div class="row mt-5">
+				<div class="col-8 mx-auto text-center my-5">
+					<div id="bottom-bar" class="h-bar">
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="row mt-5">
-			<div class="col-8 mx-auto text-center mt-5">
-				<div id="bottom-bar" class="h-bar">
-					<div id="project-highlighter"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-
-
-	<!-- JQUERY -->
-	<script
-	src="https://code.jquery.com/jquery-3.4.1.min.js"
-	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	crossorigin="anonymous"></script>
-	<!-- BOOTSTRAP DEPENDENCIES -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<!-- BAFFLE.JS -->
-	<script type="text/javascript" src="js/baffle.min.js"></script>
-	<!-- TILT.JS -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-	<!-- CUSTOM -->
-	<script type="text/javascript" src="js/projects.js"></script>
-</body>
-</html>
+		<!-- JQUERY -->
+		<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+		<!-- BOOTSTRAP DEPENDENCIES -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!-- BAFFLE.JS -->
+		<script type="text/javascript" src="js/baffle.min.js"></script>
+		<!-- TILT.JS -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+		<!-- CUSTOM -->
+		<script type="text/javascript" src="js/projects.js"></script>
+	</body>
+	</html>
