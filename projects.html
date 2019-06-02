@@ -18,37 +18,86 @@
 		<div id="boot-seq" class="text-center my-auto">
 			<div>v0.19</div>
 			<div>[<span id="boot-seq-prog">..........</span>]%</div>
+			<div id="boot-seq-res">game_dev.ini</div>
 		</div>
 	</div>
 	<div id="projects-background"></div>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-12 display-1">
-			  >	PROJECTS/GAME_DEV.EXE
-			</div>
-		</div>
-		<div id="project-cat-nav" class="row text-center my-3">
-			<div class="col-3 display-4 project-category">GAME DEV</div>
-			<div class="col-3 display-4 project-category">WEB</div>
-			<div class="col-3 display-4 project-category">SOFTWARE</div>
-			<div class="col-3 display-4 project-category">OTHER</div>
-		</div>
-		<div class="row mt-5">
+	<div id="project-cat-nav" class="row d-sm-none d-md-flex text-center my-1">
+		<div class="col-3 project-category project-category-active">GAME DEV</div>
+		<div class="col-3 project-category">WEB</div>
+		<div class="col-3 project-category">SOFTWARE</div>
+		<div class="col-3 project-category">OTHER</div>
+	</div>
+	<div id="game-dev-projects" class="container-fluid">
+		<div class="row mt-5 project-row">
 			<div class="col-6 container-fluid">
-				<div class="row">
-					<div class="col-9 text-right mx-auto">
+				<div class="row text-center">
+					<div class="col-12 text-center mx-auto">
+						<video width="100%" autoplay loop>
+							<source src="css/vid/classified.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-6">
+							<video width="100%" autoplay loop>
+								<source src="css/vid/zoomzoom.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div class="col-6">
+								<video width="100%" autoplay loop>
+									<source src="css/vid/pewpew.mp4" type="video/mp4">
+									</video>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 description-container container-fluid">
+							<div class="row">
+								<div class="col-12">
+									<h1 style="font-family: 'FreeSansOblique';">MIDNIGHT CROWN</h1>
+									<h5>STATUS: HIATUS</h5>
+									<h5>TIMEFRAME: 1 YEAR</h5>
+									<h5>DEC 2017 - JAN 2018</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6" >
+									<p id="project-description" class="text-left">A WIP 'aerospace' combat game with full flight and combat controls both in atmosphere and zero-g. A passion project I have been working on as the sole developer.</p>
+									<br>
+									<h5>FEATURES</h5>
+									<ul>
+										<li>Full 4 degree of freedom movement</li>
+										<li>Capital and fighter AI with behaviour trees and local avoidance</li>
+										<li>Diagetic cockpits linked with ship subcomponents</li>
+										<li>Trajectory prediction and aim assist for kinetic weapons</li>
+										<li>Missiles with predictive guidance</li>
+										<li>and much more...</li>
+									</ul>
+
+									<p>Postponed for restructuring and iteration.</p>
+
+									<br>
+									<h5>BUILT WITH: Unity, C#, Blender, FMODStudio, Adobe Suite</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-5 project-row">
+						<div class="col-6 container-fluid">
+							<div class="row">
+								<div class="col-9 text-right mx-auto">
 						<!-- <video  height="500px" autoplay loop>
 							<source src="css/vid/mosh3.webm" type="video/webm">
-						</video> -->
+							</video> -->
 							<img width="100%" height="auto" src="css/img/ecocity/bg-masthead.jpg">
 						</div>
 					</div>
 					<div class="row">
-							<div class="col-9 mx-auto my-2 text-center d-flex justify-content-around">
-								<img data-tilt src="https://via.placeholder.com/150">
-								<img data-tilt src="https://via.placeholder.com/150">
-								<img data-tilt src="https://via.placeholder.com/150">
-							</div>
+						<div class="col-9 mx-auto my-2 text-center d-flex justify-content-around">
+							<img data-tilt src="https://via.placeholder.com/150">
+							<img data-tilt src="https://via.placeholder.com/150">
+							<img data-tilt src="https://via.placeholder.com/150">
+						</div>
 					</div>
 				</div>
 				<div class="col-6 description-container container-fluid">
@@ -68,14 +117,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row mt-5">
-				<div class="col-8 mx-auto text-center my-5">
-					<div id="bottom-bar" class="h-bar">
-					</div>
-				</div>
-			</div>
 		</div>
-
 		<!-- JQUERY -->
 		<script
 		src="https://code.jquery.com/jquery-3.4.1.min.js"

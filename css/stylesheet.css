@@ -53,6 +53,10 @@ hr.style-3 {
 	position: relative;
 }
 
+.project-category{
+	opacity: 0.3;
+}
+
 .project-category:hover{
 	cursor: pointer;
 }
@@ -130,6 +134,26 @@ hr.style-3 {
 	opacity: 1.0;
 }
 
+.project-category-active{
+	opacity: 1.0;
+}
+
+#project-cat-nav{
+	position: fixed;
+	top: 0;
+	margin: 0 !important;
+	width: 100%;
+	z-index: 500;
+	background-color: black;
+	display: none;
+	visibility: hidden;
+	font-size: 2vw;
+}
+
+#game-dev-projects{
+	margin-top: 5%;
+}
+
 #background{
 	width: 100%;
 	height: 220%;
@@ -151,6 +175,7 @@ hr.style-3 {
 	position: fixed;
 	z-index: 1000;
 	font-size: 10vw;
+	top: 0;
 }
 
 #projects-background{

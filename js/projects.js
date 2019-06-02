@@ -1,6 +1,11 @@
 let bootProg = 0;
-var timer = setInterval(function(){fillBootBar()},150);
+var timer = setInterval(function(){fillBootBar()},100);
+setInterval(function(){blinkCursorOnActive()}, 3000);
+$('.tilt-js').tilt({
+	scale: 1.2
+});
 
+const bootSeqFiles = ['game_dev.ini', 'web_portfolio0.exe', 'initSoftware.ini', 'otherPrj.png', 'ld_effects.exe', 'the_sauce.json', '8008135', 'OwO_OS.init()', 'plsHireMe', 'all done'];
 
 //Boot Sequence
 function fillBootBar(){
@@ -9,19 +14,26 @@ function fillBootBar(){
 		let fillString = "";
 		for (let j = 0; j < bootProg; j++){
 			fillString = fillString + "\\";
-			console.log(fillString);
 		}
-		dotString = dotString.substr(bootProg, 10);
-		$("#boot-seq-prog").text("" + fillString + dotString);
+		dotString = dotString.substr(bootProg, 9);
+		$("#boot-seq-prog").text("" + (fillString + dotString));
+		$('#boot-seq-res').text(bootSeqFiles[bootProg]);
 	}
 	bootProg++;
 	if (bootProg >= 10){
 		clearInterval(timer);
 		$("#intro-overlay").fadeOut();
+		$("#project-cat-nav").css({"visibility": "visible", "display": "flex"}).fadeIn();
 	}
 }
 
+function blinkCursorOnActive(){
+	let active = baffle(".project-category-active", {
+		characters: '>/</ ▓█░|'
+	}).start();
 
+	active.reveal(500,0);
+}
 
 //Game, Web, Software, Other
 const projectQuantities = [5,2,2,2];
