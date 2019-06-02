@@ -45,8 +45,8 @@ hr.style-3 {
 	width: 100%;
 }
 
-#bottom-bar{
-	width: 100%;
+.bottom-bar{
+	width: 70%;
 	background-color: white;
 	height: 2px;
 	overflow-y: none;
@@ -109,6 +109,10 @@ hr.style-3 {
 
 #project-description{
 	font-size: 14pt;
+}
+
+.img-preview:hover{
+	z-index: 999;
 }
 
 .subject-nav{
