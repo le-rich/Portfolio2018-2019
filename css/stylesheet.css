@@ -107,6 +107,10 @@ hr.style-3 {
 	100%{top: 0px;}
 }
 
+#project-description{
+	font-size: 14pt;
+}
+
 .subject-nav{
 	font-family: 'Playfair Display', serif;
 	font-style: italic;
@@ -151,7 +155,7 @@ hr.style-3 {
 }
 
 #game-dev-projects{
-	margin-top: 5%;
+	margin-top: 4%;
 }
 
 #background{

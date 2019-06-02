@@ -1,6 +1,6 @@
 let bootProg = 0;
 var timer = setInterval(function(){fillBootBar()},100);
-setInterval(function(){blinkCursorOnActive()}, 3000);
+
 $('.tilt-js').tilt({
 	scale: 1.2
 });
@@ -27,23 +27,16 @@ function fillBootBar(){
 	}
 }
 
-function blinkCursorOnActive(){
-	let active = baffle(".project-category-active", {
-		characters: '>/</ ▓█░|'
-	}).start();
+// //Game, Web, Software, Other
+// LEGACY STYLE CODE
+// const projectQuantities = [5,2,2,2];
 
-	active.reveal(500,0);
-}
+// function createDots(index){
+// 	var distBetweenDots = 100 / (projectQuantities[index] - 1);
+// 	for (var i = 0; i < projectQuantities[index]; i++){
+// 		$("#bottom-bar").append($("<div>").addClass("project-dot").css({"left": (i * distBetweenDots) + "%"}));
+// 		console.log(i * distBetweenDots);
+// 	}
+// }
 
-//Game, Web, Software, Other
-const projectQuantities = [5,2,2,2];
-
-function createDots(index){
-	var distBetweenDots = 100 / (projectQuantities[index] - 1);
-	for (var i = 0; i < projectQuantities[index]; i++){
-		$("#bottom-bar").append($("<div>").addClass("project-dot").css({"left": (i * distBetweenDots) + "%"}));
-		console.log(i * distBetweenDots);
-	}
-}
-
-createDots(0);
+// createDots(0);
