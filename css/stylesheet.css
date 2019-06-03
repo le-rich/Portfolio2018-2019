@@ -75,7 +75,7 @@ hr.style-3 {
 }
 
 #project-super-container{
-	width: 400%;
+	width: 400vw;
 }
 
 .project-category{
@@ -132,7 +132,7 @@ hr.style-3 {
 #project-bar{
 	width: 100%;
 	margin: 0;
-	font-size: 36pt;
+	font-size: ;
 }
 
 #up-arrow{
@@ -181,7 +181,7 @@ hr.style-3 {
 }
 
 .contact-link{
-	font-size: 2vw;
+	font-size: 14pt;
 	transition: all 0.5s cubic-bezier(0,.82,.4,1);
 	opacity: 0.5;
 }
