@@ -87,10 +87,12 @@ hr.style-3 {
 }
 
 .page-nav-hidden{
-	display: none;
-	visibility: hidden;
+	color: grey;
 }
 
+.page-nav-hidden:hover{
+	cursor: auto !important;
+}
 .project-dot{
 	height: 15px;
 	width: 15px;
