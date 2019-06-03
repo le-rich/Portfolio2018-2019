@@ -1,8 +1,21 @@
 let bootProg = 0;
 var timer = setInterval(function(){fillBootBar()},100);
 
-$('.tilt-js').tilt({
-	scale: 1.2
+ $('html, body').animate({scrollLeft: $("#game-dev-projects").offset().left}, 1000);
+$('#software-btn').click(function(){
+	$('html, body').animate({scrollLeft: $("#software-projects").offset().left}, 250);
+});
+
+$('#web-btn').click(function(){
+	$('html, body').animate({scrollLeft: $("#web-projects").offset().left}, 250);
+});
+
+$('#other-btn').click(function(){
+	$('html, body').animate({scrollLeft: $("#other-projects").offset().left}, 250);
+});
+
+$('#software-btn').click(function(){
+	$('html, body').animate({scrollLeft: $("#software-projects").offset().left}, 250);
 });
 
 const bootSeqFiles = ['game_dev.ini', 'web_portfolio0.exe', 'initSoftware.ini', 'otherPrj.png', 'ld_effects.exe', 'the_sauce.json', '8008135', 'OwO_OS.init()', 'plsHireMe', 'all done'];

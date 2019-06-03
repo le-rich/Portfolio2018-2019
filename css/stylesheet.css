@@ -17,6 +17,11 @@ a:hover{
 	text-decoration: none;
 }
 
+.visible-link{
+	text-decoration: initial;
+	color: cyan;
+}
+
 h2{
 	margin: 0; 
 }
@@ -45,6 +50,22 @@ hr.style-3 {
 	width: 100%;
 }
 
+.dropdown-content{
+	position: absolute;
+	right: 0;
+	padding-right: 15px;
+  	z-index: 1;
+  	opacity: 0;
+  	transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  	background-color: #2a3439;
+  	width: 100%;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+	opacity: 1;
+}
+
 .bottom-bar{
 	width: 70%;
 	background-color: white;
@@ -53,12 +74,21 @@ hr.style-3 {
 	position: relative;
 }
 
+#project-super-container{
+	width: 400%;
+}
+
 .project-category{
 	opacity: 0.3;
 }
 
 .project-category:hover{
 	cursor: pointer;
+}
+
+.page-nav-hidden{
+	display: none;
+	visibility: hidden;
 }
 
 .project-dot{
@@ -85,6 +115,22 @@ hr.style-3 {
 
 #resume-frame{
 	margin-top: 10px;
+}
+
+
+#curr-cat{
+	background-color: #2a3439;
+	width: 100%;
+}
+
+#curr-cat-drop{
+	cursor: pointer;
+}
+
+#project-bar{
+	width: 100%;
+	margin: 0;
+	font-size: 36pt;
 }
 
 #up-arrow{
@@ -152,14 +198,14 @@ hr.style-3 {
 	margin: 0 !important;
 	width: 100%;
 	z-index: 500;
-	background-color: black;
 	display: none;
 	visibility: hidden;
 	font-size: 2vw;
+	padding: 0;
 }
 
-#game-dev-projects{
-	margin-top: 4%;
+.project-list{
+	margin-top: 1%;
 }
 
 #background{
@@ -195,6 +241,10 @@ hr.style-3 {
 	-webkit-filter: brightness(0.4);
 /*	background-image: url(../css/img/duotonesky.png);
 	background-size: cover;*/
+}
+
+.page-nav:hover{
+	cursor: pointer;
 }
 
 #homepage-container{
