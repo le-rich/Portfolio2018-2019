@@ -1,24 +1,41 @@
 let bootProg = 0;
-var timer = setInterval(function(){fillBootBar()},100);
+var timer = setInterval(function(){fillBootBar()}, 175);
 
- $('html, body').animate({scrollLeft: $("#game-dev-projects").offset().left}, 1000);
+$('html, body').animate({scrollLeft: $("#game-dev-projects").offset().left, scrollTop: 0}, 200);
+
 $('#software-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#software-projects").offset().left}, 250);
+	$('html, body').animate({scrollLeft: $("#software-projects").offset().left, scrollTop: 0}, 400);
+	swapActiveLabel($(this));
 });
 
 $('#web-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#web-projects").offset().left}, 250);
+	$('html, body').animate({scrollLeft: $("#web-projects").offset().left, scrollTop: 0}, 400);
+	swapActiveLabel($(this));
 });
 
 $('#other-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#other-projects").offset().left}, 250);
+	$('html, body').animate({scrollLeft: $("#other-projects").offset().left, scrollTop: 0}, 400);
+	swapActiveLabel($(this));
 });
 
 $('#software-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#software-projects").offset().left}, 250);
+	$('html, body').animate({scrollLeft: $("#software-projects").offset().left, scrollTop: 0}, 400);
+	swapActiveLabel($(this));
 });
 
-const bootSeqFiles = ['game_dev.ini', 'web_portfolio0.exe', 'initSoftware.ini', 'otherPrj.png', 'ld_effects.exe', 'the_sauce.json', '8008135', 'OwO_OS.init()', 'plsHireMe', 'all done'];
+$('#game-dev-btn').click(function(){
+	$('html, body').animate({scrollLeft: $("#game-dev-projects").offset().left, scrollTop: 0}, 400);
+	swapActiveLabel($(this));
+});
+
+function swapActiveLabel(jObj){
+	var textToInsert =  $(jObj).text();
+	$('#curr-project-label').text(textToInsert);
+	$(".page-nav-hidden").removeClass("page-nav-hidden");
+	$(jObj).addClass("page-nav-hidden");
+}
+
+const bootSeqFiles = ['game_dev.ini', 'web_portfolio0.exe', 'initSoftware.ini', 'otherPrj.png', 'ld_effects.exe', 'the_sauce.json', '8008135', 'OwO_OS.init()', 'pls_hire_me', 'done'];
 
 //Boot Sequence
 function fillBootBar(){
