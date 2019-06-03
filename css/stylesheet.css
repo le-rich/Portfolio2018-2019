@@ -17,6 +17,11 @@ a:hover{
 	text-decoration: none;
 }
 
+.visible-link{
+	text-decoration: initial;
+	color: cyan;
+}
+
 h2{
 	margin: 0; 
 }
@@ -42,22 +47,48 @@ hr.style-3 {
 
 /*Child*/
 #nav-container{
-	text-overflow: none;
-	white-space: nowrap;
-	overflow-x: hidden;
 	width: 100%;
 }
 
-#bottom-bar{
-	width: 100%;
+.dropdown-content{
+	position: absolute;
+	right: 0;
+	padding-right: 15px;
+  	z-index: 1;
+  	opacity: 0;
+  	transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  	background-color: #2a3439;
+  	width: 100%;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+	opacity: 1;
+}
+
+.bottom-bar{
+	width: 70%;
 	background-color: white;
 	height: 2px;
 	overflow-y: none;
 	position: relative;
 }
 
+#project-super-container{
+	width: 400%;
+}
+
+.project-category{
+	opacity: 0.3;
+}
+
 .project-category:hover{
 	cursor: pointer;
+}
+
+.page-nav-hidden{
+	display: none;
+	visibility: hidden;
 }
 
 .project-dot{
@@ -68,11 +99,11 @@ hr.style-3 {
 	color: white;
 	border: 2px solid white;
 	position: absolute;
-	transform: translate(0%,-42%);
+	top: -7.5px;
 	vertical-align: middle;
 	background-color: white;
+	transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
 
 #resume-container{
 	position: absolute;
@@ -86,12 +117,29 @@ hr.style-3 {
 	margin-top: 10px;
 }
 
+
+#curr-cat{
+	background-color: #2a3439;
+	width: 100%;
+}
+
+#curr-cat-drop{
+	cursor: pointer;
+}
+
+#project-bar{
+	width: 100%;
+	margin: 0;
+	font-size: 36pt;
+}
+
 #up-arrow{
 	opacity: 0.3;
-	transform: scale(2);
+	transform: scale(1);
 	transition: all 0.5s;
 	animation: teaseup 5s infinite;
 	animation-timing-function: ease-in-out;
+	filter: invert(1);
 }
 
 #up-arrow:hover{
@@ -105,20 +153,59 @@ hr.style-3 {
 	100%{top: 0px;}
 }
 
+#project-description{
+	font-size: 14pt;
+}
+
+.img-preview:hover{
+	z-index: 999;
+}
+
 .subject-nav{
 	font-family: 'Playfair Display', serif;
 	font-style: italic;
 	letter-spacing: 0px;
-	font-size:  12vw !important;
+	font-size:  13vw !important;
 	transition: all 0.5s cubic-bezier(0,.82,.4,1);
 	opacity: 0.3;
 }
 
+
 .subject-nav:hover{
-	letter-spacing: 5px;
+	letter-spacing: 10px;
 	transform: scale(1.05);
 	opacity: 1.0;
 	cursor: pointer;
+}
+
+.contact-link{
+	font-size: 2vw;
+	transition: all 0.5s cubic-bezier(0,.82,.4,1);
+	opacity: 0.5;
+}
+
+.contact-link:hover{
+	opacity: 1.0;
+}
+
+.project-category-active{
+	opacity: 1.0;
+}
+
+#project-cat-nav{
+	position: fixed;
+	top: 0;
+	margin: 0 !important;
+	width: 100%;
+	z-index: 500;
+	display: none;
+	visibility: hidden;
+	font-size: 2vw;
+	padding: 0;
+}
+
+.project-list{
+	margin-top: 1%;
 }
 
 #background{
@@ -131,31 +218,70 @@ hr.style-3 {
 	-webkit-filter: brightness(0.7);
 	filter: brightness(0.7);
 	transition: all 1.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-	animation-name: brightup;
+	animation-name: brightup-home;
 	animation-duration: 1s;
+}
+
+#intro-overlay{
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1000;
+	font-size: 10vw;
+	top: 0;
 }
 
 #projects-background{
 	width: 100%;
 	height: 100%;
 	background-color: black;
-	position: absolute;
+	position: fixed;
 	top: 0%;
-	background-image: url(../css/img/duotonesky.png);
-	background-size: cover;
+	-webkit-filter: brightness(0.4);
+/*	background-image: url(../css/img/duotonesky.png);
+	background-size: cover;*/
 }
 
-@keyframes brightup{
+.page-nav:hover{
+	cursor: pointer;
+}
+
+#homepage-container{
+	transition: all 0.5s;
+}
+
+.description-container{
+	font-family: 'FreeSans';
+}
+
+@keyframes brightup-home{
 	from {-webkit-filter: brightness(0.0);
 	filter: brightness(0.0);}
 	to {-webkit-filter: brightness(0.7);
 	filter: brightness(0.7);}
 }
 
+@keyframes brightdown-home{
+	from {-webkit-filter: brightness(0.7);
+	filter: brightness(0.7);}
+	to {-webkit-filter: brightness(0.0);
+	filter: brightness(0.0);}
+}
 
 #background video{
 	width: 115%;
 	height: 100%;
+}
+
+#boot-seq{
+	animation: boot-up 0.5s;
+}
+
+@keyframes boot-up{
+	0% {opacity: 0;}
+	99%{opacity: 0;}
+	100%{opacity: 1;}
 }
 
 
