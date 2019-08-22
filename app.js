@@ -10,7 +10,23 @@ app.get('/', function (req, res){
 });
 
 app.get('/projects', function(req, res){
-	res.sendFile(__dirname + '/projects.html');
+	res.sendFile(__dirname + '/projects-gd.html');
+});
+
+app.get('/projects-gd', function(req, res){
+	res.sendFile(__dirname + '/projects-gd.html');
+});
+
+app.get('/projects-software', function(req, res){
+	res.sendFile(__dirname + '/projects-software.html')
+});
+
+app.get('/projects-design', function(req, res){
+	res.sendFile(__dirname + '/projects-design.html')
+});
+
+app.get('/projects-web', function(req, res){
+	res.sendFile(__dirname + '/projects-web.html')
 });
 
 app.listen(port, function(){

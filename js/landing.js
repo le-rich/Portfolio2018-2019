@@ -24,7 +24,7 @@ $("#projects-nav").click(function(){
 	$("#background").css({	"-webkit-filter": "brightness(0)",
 	"filter": "brightness(0)"});
 	$("#homepage-container").css({"opacity": "0"});
-	setTimeout(function(){ window.location.href="/projects"}, 500);
+	setTimeout(function(){ window.location.href="projects-gd.html"}, 500);
 });
 
 
