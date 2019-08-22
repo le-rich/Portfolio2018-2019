@@ -75,7 +75,7 @@ hr.style-3 {
 }
 
 #project-super-container{
-	width: 400vw;
+	width: 100vw;
 }
 
 .project-category{
@@ -200,8 +200,6 @@ hr.style-3 {
 	margin: 0 !important;
 	width: 100%;
 	z-index: 500;
-	display: none;
-	visibility: hidden;
 	font-size: 2vw;
 	padding: 0;
 }

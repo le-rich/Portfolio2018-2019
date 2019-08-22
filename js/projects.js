@@ -1,31 +1,30 @@
 let bootProg = 0;
-var timer = setInterval(function(){fillBootBar()}, 175);
+//var timer = setInterval(function(){fillBootBar()}, 175);
 
-$('html, body').animate({scrollLeft: $("#game-dev-projects").offset().left, scrollTop: 0}, 200);
+$("#project-super-container").fadeIn("slow");
 
 $('#software-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#software-projects").offset().left, scrollTop: 0}, 400);
-	swapActiveLabel($(this));
+	$("#project-super-container").fadeOut("fast", function(){
+		window.location.href = "projects-software.html";
+	});
 });
 
 $('#web-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#web-projects").offset().left, scrollTop: 0}, 400);
-	swapActiveLabel($(this));
+	$("#project-super-container").fadeOut("fast", function(){
+		window.location.href = "projects-web.html";
+	});
 });
 
 $('#other-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#other-projects").offset().left, scrollTop: 0}, 400);
-	swapActiveLabel($(this));
-});
-
-$('#software-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#software-projects").offset().left, scrollTop: 0}, 400);
-	swapActiveLabel($(this));
+	$("#project-super-container").fadeOut("fast", function(){
+		window.location.href = "projects-design.html";
+	});
 });
 
 $('#game-dev-btn').click(function(){
-	$('html, body').animate({scrollLeft: $("#game-dev-projects").offset().left, scrollTop: 0}, 400);
-	swapActiveLabel($(this));
+	$("#project-super-container").fadeOut("fast", function(){
+		window.location.href = "projects-gd.html";
+	});
 });
 
 function swapActiveLabel(jObj){
