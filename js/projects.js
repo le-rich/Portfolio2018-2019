@@ -5,25 +5,25 @@ $("#project-super-container").fadeIn("slow");
 
 $('#software-btn').click(function(){
 	$("#project-super-container").fadeOut("fast", function(){
-		window.location.href = "projects-software.html";
+		window.location.replace("projects-software.html");
 	});
 });
 
 $('#web-btn').click(function(){
 	$("#project-super-container").fadeOut("fast", function(){
-		window.location.href = "projects-web.html";
+		window.location.replace("projects-web.html");
 	});
 });
 
 $('#other-btn').click(function(){
 	$("#project-super-container").fadeOut("fast", function(){
-		window.location.href = "projects-design.html";
+		window.location.replace("projects-design.html");
 	});
 });
 
 $('#game-dev-btn').click(function(){
 	$("#project-super-container").fadeOut("fast", function(){
-		window.location.href = "projects-gd.html";
+		window.location.replace("projects-gd.html");
 	});
 });
 
@@ -55,17 +55,3 @@ function fillBootBar(){
 		$("#project-cat-nav").css({"visibility": "visible", "display": "flex"}).fadeIn();
 	}
 }
-
-// //Game, Web, Software, Other
-// LEGACY STYLE CODE
-// const projectQuantities = [5,2,2,2];
-
-// function createDots(index){
-// 	var distBetweenDots = 100 / (projectQuantities[index] - 1);
-// 	for (var i = 0; i < projectQuantities[index]; i++){
-// 		$("#bottom-bar").append($("<div>").addClass("project-dot").css({"left": (i * distBetweenDots) + "%"}));
-// 		console.log(i * distBetweenDots);
-// 	}
-// }
-
-// createDots(0);

@@ -42,7 +42,7 @@ function hideResume(){
 	$("#up-arrow").css({"cursor": "cursor"});
 }
 
-const labels = ["SOFTWARE DEVELOPER", "GAME DEVELOPER", "FULL STACK DEVELOPER", "DESIGNER (?)"]
+const labels = ["SOFTWARE DEVELOPER", "GAME DEVELOPER", "FULL STACK DEVELOPER", "DESIGNER"]
 let currentLabel = 0;
 setInterval(function(){switchLabel()}, 2000);
 
