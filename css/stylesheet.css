@@ -123,6 +123,7 @@ hr.style-3 {
 #curr-cat{
 	background-color: #2a3439;
 	width: 100%;
+	font-size: 
 }
 
 #curr-cat-drop{
@@ -200,7 +201,7 @@ hr.style-3 {
 	margin: 0 !important;
 	width: 100%;
 	z-index: 500;
-	font-size: 2vw;
+	font-size: 32pt;
 	padding: 0;
 }
 
